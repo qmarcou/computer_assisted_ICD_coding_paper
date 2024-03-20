@@ -1,0 +1,25 @@
+{
+  "target_metric": {
+    "name": "overall_micro_aucPR",
+    "direction": "max"
+  },
+  "init": {
+    "overwrite": false,
+    "max_epochs": 150,
+    "factor": 3,
+    "hyperband_iterations": 2,
+    "executions_per_trial": 3
+  },
+  "search": {
+    "epochs": 80,
+    "batch_size": 128
+  },
+  "evaluate": {
+    "batch_size": 128,
+    "verbose":false
+  },
+  "predict": {
+    "batch_size": 128,
+    "verbose":false
+  }
+}

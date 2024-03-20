@@ -1,0 +1,19 @@
+channels:
+- nvidia
+- pytorch
+- conda-forge
+- defaults
+dependencies:
+- ipykernel
+- ipython
+- ipywidgets
+- matplotlib
+- networkx
+- cudatoolkit
+- pandas
+- plotly
+- pytorch::torchaudio
+- pytorch::torchvision
+- pytorch=1.10.0=py3.9_cuda11.3_cudnn8.2.0_0
+- scikit-learn
+- seaborn

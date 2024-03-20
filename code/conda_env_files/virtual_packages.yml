@@ -1,0 +1,5 @@
+# virtual packages override
+subdirs:
+        linux_64:
+                packages:
+                        __cuda: ''

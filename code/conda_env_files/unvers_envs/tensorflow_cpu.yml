@@ -1,0 +1,9 @@
+channels:
+  - conda-forge
+dependencies:
+  - codecarbon
+  - pip:
+    - intel-tensorflow
+    - tensorflow-probability
+    - keras-tuner
+    - libclang<=14.0.1

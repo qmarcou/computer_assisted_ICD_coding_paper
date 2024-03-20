@@ -1,0 +1,6 @@
+channels:
+- huggingface
+- defaults
+dependencies:
+- huggingface::transformers
+- conda-forge::spacy

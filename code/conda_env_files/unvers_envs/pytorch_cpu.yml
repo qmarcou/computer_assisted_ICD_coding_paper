@@ -1,0 +1,7 @@
+channels:
+- pytorch
+dependencies:
+- pytorch::pytorch
+- pytorch::torchvision
+- pytorch::torchaudio
+- pytorch::cpuonly

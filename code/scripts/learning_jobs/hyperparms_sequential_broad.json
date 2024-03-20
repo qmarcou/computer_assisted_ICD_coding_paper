@@ -1,0 +1,28 @@
+{
+    "use_dropout":{
+        "enable":true
+    },
+    "dropout":{
+        "min_value":0.0,
+        "max_value":0.8,
+        "default":0
+    },
+    "num_layers":{
+        "min_value":1,
+        "max_value":8,
+        "step":1,
+        "default":1
+    },
+    "units":{
+       "min_value":256,
+       "max_value":6144,
+       "default": 256,
+        "step": 256
+    },
+    "batchnorm":{
+        "enable":true
+    },
+    "activation":{
+        "values":["relu"]
+    }
+}

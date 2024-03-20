@@ -1,0 +1,9 @@
+channels:
+- nvidia
+- pytorch
+- conda-forge
+dependencies:
+- conda-forge::pytorch-gpu
+- pytorch::torchvision
+- pytorch::torchaudio
+- nvidia::cudatoolkit

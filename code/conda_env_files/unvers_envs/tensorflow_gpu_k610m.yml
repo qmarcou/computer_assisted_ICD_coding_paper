@@ -1,0 +1,35 @@
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - cudatoolkit=10.1
+  - cudnn=7.6
+  - pip:
+    - tensorflow==2.3
+    - protobuf<=3.20
+    - pandas
+    - numpy
+    - matplotlib
+    - ipython<=8.12
+    - pyarrow
+    - fastparquet
+    
+# Notes: This file was tailored made to make TF run on a old K610m GPU on 
+# Ubuntu 22.04.
+# Only two versions of the NVIDIA driver can be installed: 390 (default) or 418.
+# The first one only accepts CUDA versions up to 9.1, the second up to 10.1
+# Using 9.1, one simply cannot run any TF 2.x version only 1.x, using 10.1
+# allows to run TF up to version 2.3.
+# The CUDA versions served on the NVIDIA website for system wide install support
+# ubuntu up to 17.04 and 18.04 respectively. However one can still install
+# the run file, passing a falg to ignore gcc versions issue. Make sure not to 
+# downgrade your system NVIDIA driver if using this workaround by installing 
+# only the CUDA toolkit.
+# The environement was created using conda-lock 2.1.2 with the following
+# commands:
+# conda-lock lock -f tensorflow_gpu_k610m.yml --without-cuda -p linux-64 --kind lock --mamba
+# conda-lock install --name pmsi_tf_gpu conda-lock.yml
+# The different constraints can be found online:
+# - Nvidia driver - CUDA version: https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id5
+# - TF - python - CUDA - CUDNN: https://www.tensorflow.org/install/source#gpu
+# - NVIDIA devices compute capabilities: https://en.wikipedia.org/wiki/CUDA#GPUs_supported

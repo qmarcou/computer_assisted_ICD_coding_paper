@@ -1,0 +1,9 @@
+channels:
+- defaults
+dependencies:
+- nb_conda
+- nb_conda_kernels
+- rise
+- conda-forge::conda-merge
+- conda-forge::conda-lock
+- conda-forge::jupyterlab-git

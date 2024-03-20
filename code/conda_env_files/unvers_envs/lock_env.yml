@@ -1,0 +1,7 @@
+name: lock_env
+channels:
+- defaults
+dependencies:
+- pip    
+- pip:
+    - conda-lock[pip_support]
