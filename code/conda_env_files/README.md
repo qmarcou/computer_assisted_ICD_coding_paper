@@ -1,3 +1,9 @@
+# Backcompatibility issues
+With time some breaking changes in conda-lock and mamba have impeded this procedure.
+To make sure to get it all working you can install conda-lock version 1.2.1 and mamba version 0.24.0.
+The constraint on conda-lock's version is easy to statisfy and now enforced in the lock environment file, you can thus blindly follow the instruction below.
+The constraint on mamba is a bit more cubersome, and the easiest workaround is to install an old version of mambaforge. A version statisfying this requirement is [mambaforge 4.13.0-1](https://github.com/conda-forge/miniforge/releases/tag/4.13.0-1).
+
 # Folder content
 
  This folder contains 3 types of environment files:
@@ -13,7 +19,7 @@ conda env create -f unvers_envs/lock_env.yml
 ```
 
 Fully reproducible:
- - Install lock using : `conda create --name YOURENV --file tf_cpu-linux-64.lock` or `conda-lock install [-p {prefix}|-n {name}]`
+ - Install lock using :  `conda-lock install -n YOURENVNAME conda-lock.yml`
 
 or
 Almost fully reproducible:
@@ -25,8 +31,8 @@ See conda-lock [GitHub](https://github.com/conda-incubator/conda-lock) or `conda
 
 ```
 conda-lock install --name pmsi_db_analysis db_analysis.conda-lock.yml
-conda-lock install --name pmsi_tf_cpu pmsi_tf_cpu.conda-lock.yml
-conda-lock install --name pmsi_tf_gpu pmsi_tf_gpu.conda-lock.yml
+conda-lock install --name pmsi_tf_cpu tf_cpu.conda-lock.yml
+conda-lock install --name pmsi_tf_gpu tf_gpu.conda-lock.yml
 ```
 
 # Environment update
