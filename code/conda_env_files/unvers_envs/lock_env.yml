@@ -4,4 +4,4 @@ channels:
 dependencies:
 - pip    
 - pip:
-    - conda-lock[pip_support]
+    - conda-lock[pip_support]==1.2.1
